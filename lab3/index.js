@@ -41,7 +41,7 @@ function isGreaterThan(first, second) {
 }
 
 function isEven(number) {
-    return number => number % 2 === 0
+    return number % 2 === 0
 }
 
 function isSameLength(first, second) {
