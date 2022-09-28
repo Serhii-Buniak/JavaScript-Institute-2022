@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "name": "javascript",
+  "description": "",
+  "main": "index.html",
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  }
+}
