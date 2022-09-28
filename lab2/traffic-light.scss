@@ -1,0 +1,33 @@
+.traffic-light {
+    background-color: black;
+    width: 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    &__circle {
+        height: 100px;
+        border-radius: 50%;
+        width: inherit;
+        &.dark {
+            filter: brightness(25%);
+        }
+    }
+
+    .circle {
+        &__red {
+            background-color: red;
+        }
+
+        &__yellow {
+            background-color: yellow;
+        }
+
+        &__green {
+            background-color: green;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.lightbulb {
+    text-align: center;
+    width: 160px;
+    &__image {
+        height: 150px;
+        margin: 20px 0;
+    }
+    .image {
+        &__on {
+            filter: invert(55%) sepia(100%) saturate(1400%) hue-rotate(15deg) brightness(130%) contrast(100%);
+        }
+    }
+
+    .button-wrapper {
+        &__on {
+        }
+
+        &__off {
+        }
+    }
+}

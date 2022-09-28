@@ -1,0 +1,11 @@
+.lightbulb {
+  text-align: center;
+  width: 160px;
+}
+.lightbulb__image {
+  height: 150px;
+  margin: 20px 0;
+}
+.lightbulb .image__on {
+  filter: invert(55%) sepia(100%) saturate(1400%) hue-rotate(15deg) brightness(130%) contrast(100%);
+}
