@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        img {
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="image" src="" alt="">
+    <div id="title"></div>
+</body>
+<script>
+    const images = [
+        {
+            name: "img1.jpg",
+            title: "image1",
+        },
+        {
+            name: "img2.jpg",
+            title: "image2",
+        },
+        {
+            name: "img3.jpg",
+            title: "image3",
+        },
+    ]
+
+    const image = document.getElementById("image")
+    const title = document.getElementById("title")
+
+    title.addEventListener("click", () => {
+        title.style.color  = `rgb(${Math.floor(Math.random() * (255 - 0 + 1) + 0)},${Math.floor(Math.random() * (255 - 0 + 1) + 0)},${Math.floor(Math.random() * (255 - 0 + 1) + 0)})`
+        title.style.backgroundColor  = `rgb(${Math.floor(Math.random() * (255 - 0 + 1) + 0)},${Math.floor(Math.random() * (255 - 0 + 1) + 0)},${Math.floor(Math.random() * (255 - 0 + 1) + 0)})`
+    })
+
+    let current = 0
+
+    image.src = `images/${images[0].name}`
+    image.alt = images[0].name
+    title.innerText = images[0].title
+
+    image.addEventListener("click", () => {
+        current++
+        if (current === images.length) {
+            current = 0
+        }
+
+        image.src = `images/${images[current].name}`
+        title.innerText = images[current].title
+        image.alt = images[current].name
+    })
+
+</script>
+
+</html>
