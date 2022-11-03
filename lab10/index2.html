@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <span>горизонтальна а=</span>
+        <input id="a" type="number" value="50">
+    </div>
+    <div>
+        <span>вертикальна b=</span>
+        <input id="b" type="number" value="50">
+    </div>
+    <div>
+        <canvas id="canvas" width="200" height="200"></canvas>
+    </div>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        const a = document.getElementById("a")
+        const b = document.getElementById("b")
+
+        a.onchange = () => {
+            const aValue = Number.parseInt(a.value)
+            const bValue = Number.parseInt(b.value)
+            writeFigure(aValue, bValue)
+        }
+
+        b.onchange = () => {
+            const aValue = Number.parseInt(a.value)
+            const bValue = Number.parseInt(b.value)
+            writeFigure(aValue, bValue)
+        }
+
+        function writeFigure(a, b) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.ellipse(100, 100, a, b, 0, 0, 2 * Math.PI);
+            ctx.stroke();
+
+            ctx.beginPath();
+        
+            ctx.moveTo(100, 200);
+            ctx.lineTo(100, 0);
+            ctx.stroke();
+        }
+
+    </script>
+</body>
+
+</html>

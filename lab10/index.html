@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        div {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <select id="imageSelect">
+            <option value="img1.jpg">img1.jpg</option>
+            <option value="img2.jpg">img2.jpg</option>
+            <option value="img3.jpg">img3.jpg</option>
+        </select>
+    </div>
+    <img id="image" src="" alt="">
+    <script>
+        const imageEl = document.getElementById("image")
+        const imageSelectEl = document.getElementById("imageSelect")
+        const image = new Image(100, 100)
+
+        image.src = `/images/${imageSelectEl.value}`
+        imageEl.src = image.src
+        imageEl.alt = imageSelectEl.value
+
+        imageSelectEl.addEventListener("change", () => {
+            image.src = `/images/${imageSelectEl.value}`
+            imageEl.src = image.src
+            imageEl.alt = imageSelectEl.value
+        })
+    </script>
+</body>
+
+</html>
