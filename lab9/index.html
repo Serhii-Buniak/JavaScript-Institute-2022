@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/index.js" defer></script>
+    <style>
+        div {
+            padding: 5px;
+        }
+        .error {
+            font-size: 12px;
+            color: rgb(137, 31, 31);
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form">
+        <div>
+            <div class="furniture-error error"></div>
+            <select id="furniture" name="furniture">
+                <option value="" selected>---</option>
+                <option value="шафа">шафа</option>
+                <option value="стіл">стіл</option>
+                <option value="сервант">сервант</option>
+            </select>
+        </div>
+        <div>
+            <div class="tree-error error"></div>
+            <select id="tree" name="tree">
+                <option value="" selected>---</option>
+                <option value="дуб">дуб</option>
+                <option value="горіх">горіх</option>
+                <option value="бук">бук</option>
+            </select>
+        </div>
+        <div>
+            <div class="count-error error"></div>
+            <input name="count" id="input" type="number">
+        </div>
+        <button id="button" type="submit">Відправити</button>
+    </form>
+</body>
+
+</html>

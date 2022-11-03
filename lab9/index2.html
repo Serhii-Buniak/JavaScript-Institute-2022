@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>Угол в градусах</span>
+        <input value="0" id="degree" type="number" />
+    </div>
+    <div>
+        <span>Функція .........</span>
+        <select id="trigonometricFunction">
+            <option value="sin">синус</option>
+            <option value="cos">косинус</option>
+            <option value="tan">тангенс</option>
+        </select>
+    </div>
+    <div>
+        <button id="compute">Вычислить</button>
+    </div>
+    <div id="result">sin(30°)=0.5</div>
+    <script>
+        const degreeEl = document.getElementById("degree")
+        const trigonometricFunctionEl = document.getElementById("trigonometricFunction")
+        const computeEl = document.getElementById("compute")
+        const resultEl = document.getElementById("result")
+
+        computeEl.addEventListener("click", () => {
+            const degree = Number.parseInt(degreeEl.value)
+            const radian = toRadians(degree)
+            const trigFunction = trigonometricFunctionEl.value
+
+            const result = +Math[trigFunction](radian).toFixed(2)
+            resultEl.innerText = `${trigFunction}(${degree}°)=${result}`
+        })
+
+        function toRadians(angle) {
+            return angle * (Math.PI / 180)
+        }
+    </script>
+</body>
+
+</html>
