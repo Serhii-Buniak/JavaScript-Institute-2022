@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title {
+            padding: 2px;
+            margin-top: 15px;
+        }
+
+        #calculate {
+            margin: 5px 5px 5px 2px;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 3px solid purple;
+        }
+
+        th {
+            border: 3px solid purple;
+        }
+
+        td {
+            border: 1px solid purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form-wrapper">
+        <fieldset>
+            <legend>Функія</legend>
+            <select id="function">
+                <option value="sin">сінус</option>
+                <option value="cos">косінус</option>
+            </select>
+        </fieldset>
+
+        <div class="title">Введіть діапазон кутів в градусах</div>
+
+        <fieldset>
+            <legend>початок</legend>
+            <input id="start" type="text" value="30">
+        </fieldset>
+        <fieldset>
+            <legend>кінець</legend>
+            <input id="end" type="text" value="40">
+        </fieldset>
+        <fieldset>
+            <legend>крок</legend>
+            <input id="step" type="text" value="40">
+        </fieldset>
+        <button id="calculate">вирахувати</button>
+    </div>
+    <div id="table-wrapper">
+        <table id="table">
+            <thead>
+
+                <tr>
+                    <th colspan="2">Кут</th>
+                    <th id="table-function" rowspan="2">sin</th>
+                </tr>
+                <tr>
+                    <td>в радусах</td>
+                    <td>в радіанах</td>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr>
+                    <td>text2.1</td>
+                    <td>text2.2</td>
+                    <td>text2.3</td>
+                </tr>
+                <tr>
+                    <td>text3.1</td>
+                    <td>text3.2</td>
+                    <td>text3.3</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="/js/first/form.js"></script>
+<script src="/js/first/table.js"></script>
+
+</html>

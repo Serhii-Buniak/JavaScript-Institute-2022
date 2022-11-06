@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #calculate {
+            margin: 5px 5px 5px 2px;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 3px solid purple;
+        }
+
+        th {
+            border: 3px solid purple;
+        }
+
+        td {
+            border: 1px solid purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form-wrapper">
+        <fieldset>
+            <legend>Товар</legend>
+            <select id="product">
+
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Ціна</legend>
+            <input id="price" type="text">
+        </fieldset>
+        <fieldset>
+            <legend>Кількість</legend>
+            <input id="count" type="text">
+        </fieldset>
+
+        <button id="calculate">вирахувати</button>
+    </div>
+    <div id="table-wrapper">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Назва</th>
+                    <th>Ціна</th>
+                    <th>Кількість</th>
+                    <th>Сумарна ціна</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr>
+                    <td>Стол письменний</td>
+                    <td>12000</td>
+                    <td>5</td>
+                    <td>60000</td>
+                </tr>
+                <tr>
+                    <td>Стол кухонний</td>
+                    <td>8000</td>
+                    <td>10</td>
+                    <td>80000</td>
+                </tr>
+                <tr>
+                    <td>Стілець</td>
+                    <td>20</td>
+                    <td>1200</td>
+                    <td>12000</td>
+                </tr>
+                <tr>
+                    <td>Шафа</td>
+                    <td>14200</td>
+                    <td>4</td>
+                    <td>68800</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Сума</td>
+                    <td id="total">220800</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</body>
+<script src="/js/second/form.js"></script>
+<script src="/js/second/table.js"></script>
+
+</html>
