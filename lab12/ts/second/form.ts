@@ -1,20 +1,20 @@
 interface FormValue2 {
-    product: string
+    name: string
     price: number
     count: number
 }
 
 const getFormValues2 = (): FormValue2 => {
-    const productEl = document.getElementById("product") as HTMLSelectElement
+    const nameEl = document.getElementById("name") as HTMLSelectElement
     const priceEl = document.getElementById("price") as HTMLInputElement
     const countEl = document.getElementById("count") as HTMLInputElement
 
-    const product: string = productEl.value
+    const name: string = nameEl.value
     const price: number = Number(priceEl.value)
     const count: number = Number(countEl.value)
 
     return {
-        product: product,
+        name: name,
         price: price,
         count: count
     }

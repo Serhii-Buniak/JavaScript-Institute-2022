@@ -1,12 +1,12 @@
 var getFormValues2 = function () {
-    var productEl = document.getElementById("product");
+    var nameEl = document.getElementById("name");
     var priceEl = document.getElementById("price");
     var countEl = document.getElementById("count");
-    var product = productEl.value;
+    var name = nameEl.value;
     var price = Number(priceEl.value);
     var count = Number(countEl.value);
     return {
-        product: product,
+        name: name,
         price: price,
         count: count
     };
